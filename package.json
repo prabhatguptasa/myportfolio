@@ -1,8 +1,8 @@
-{
+{   
+    "homepage": "https://prabhatguptasa.github.io/myportfolio/",
     "name": "@welovedevs/react-ultimate-resume",
     "version": "1.1.9-beta.15",
     "description": "Developer profile for W3D",
-    "homepage": "https://prabhatguptasa.github.io/myportfolio/",
     "main": "lib/index.js",
     "scripts": {
         "start": "touch .env.local && sh -ac 'sh .env.${NODE_ENV:-local}; PORT=${PORT:-3000} EXTEND_ESLINT=true BROWSER=none TAILWIND_MODE=watch craco start'",
@@ -20,6 +20,7 @@
         "serve": "craco build && serve build",
         "manage:translations": "node ./translationRunner.js",
         "gh-deploy": "yarn build && gh-pages -d build",
+        "deploy": "yarn gh-deploy",
         "version:beta": "npm version prerelease --preid=beta",
         "version:release": "npm version ${VERSION:-patch}"
     },
